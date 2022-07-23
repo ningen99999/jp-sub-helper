@@ -56,6 +56,12 @@ def filter_duplicates(mecab_result):
 
 
 def get_mecab_grouped_by_part_of_speech(mecab_result, option='verbose'):
+    """
+    Formats mecab_result from parse() into dict of parts of speech as keys and terms in list
+    :param mecab_result: result from parse()
+    :param option: verbose=full mecab result line; simple=only dictionary form
+    :return: dict of part of speech key and its occurrences in list
+    """
     parts_of_speech = get_unique_parts_of_speech(mecab_result)
 
     mecab_dict = {}
