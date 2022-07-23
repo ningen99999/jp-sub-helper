@@ -24,8 +24,6 @@ def parse(text, include_duplicates=True):
     return filter_duplicates(mecab_result)
 
 
-
-
 def get_unique_parts_of_speech(mecab_result):
     """
     Finds and returns all unique parts of speech that occur in MeCab result
@@ -55,6 +53,7 @@ def filter_duplicates(mecab_result):
             filtered_list.append(each)
 
     return filtered_list
+
 
 def get_mecab_grouped_by_part_of_speech(mecab_result, option='verbose'):
     parts_of_speech = get_unique_parts_of_speech(mecab_result)
